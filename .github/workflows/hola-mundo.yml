@@ -6,8 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        # Actualizado de v3 a v4
+        uses: actions/checkout@v4
+      
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-      - name: Correr script
+      
+      - name: Correr script de Node.js
         run: node hola_mundo.js
